@@ -1,0 +1,215 @@
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Dark-Blue-a: hsla(249, 10%, 26%, 0.301) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+.errorIcon,
+.errorText{
+    display: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url("images/bg-intro-desktop.png");
+    background-color: var(--Red);
+    /* padding: 90px; */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+.hide{
+    display: none;
+}
+p{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.card{
+    width: 40%;
+}
+
+.card h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    line-height: 45px;
+    margin-bottom: 20px;
+}
+
+#btn-darkBlue{
+    background-color: var(--Blue);
+    color: rgba(255, 255, 255, 0.52);
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0px 7px var(--Dark-Blue-a);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+#btn-darkBlue span{
+    font-weight: 700;
+    color: #fff;
+}
+
+.form{
+    background-color: rgb(255, 255, 255);
+    padding:40px 30px;
+    color: #000;
+    border-radius: 10px;
+}
+.form .group{
+    position: relative;
+}
+
+.form input{
+    width: 100%;
+    position: relative;
+    padding: 12px 15px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    outline: none;
+    font-weight: 800;
+    border: 1px solid var(--Dark-Blue-a);
+}
+
+input:focus{
+    border: 2px solid var(--Dark-Blue);
+}
+
+.errorIcon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.errorText{
+    color: var(--Red);
+    font-size: 10px;
+    font-style: italic;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--Green);
+    padding: 12px 0;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.btn:hover{
+    background-color: hsl(154, 44%, 59%);
+}
+
+.form p{
+    font-size: 10px;
+    color: hsl(249, 10%, 26%, 0.6);
+    text-align: center;
+}
+
+/* .form p small{
+    color: var(--Red);
+    font-weight: 700;
+} */
+
+
+.card .error .errorText,
+.card .error .errorIcon {
+	display: block;
+}
+
+.card .error input {
+	border: 2px solid hsl(0, 100%, 74%);
+}
+
+.attribution{ 
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media(max-width:1075px){
+    .container{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card{
+        width: 100%;
+        margin-top: 70px;
+    }
+
+}
+
+@media(max-width:750px){
+    .container{
+        height: 100%;
+    }
+}
+
+@media(max-width:375px) {
+    body{
+        background: url(images/bg-intro-mobile.png);
+        background-color: var(--Red);
+    }
+    
+    .container{
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .card{
+        width: 100%;
+        margin-top: 70px;
+    }
+    
+    .card h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 32px;
+        /* line-height: 25px; */
+    }
+
+    #btn-darkBlue{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    
+    .form p{
+        font-size: 12px;
+    }
+
+}
